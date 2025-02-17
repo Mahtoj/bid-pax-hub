@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Clock, MapPin, Package } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -153,9 +154,12 @@ const Index = () => {
                       <span>{auction.lots} Lots</span>
                     </div>
                   </div>
-                  <button className="mt-6 w-full bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors duration-200">
+                  <Link 
+                    to={`/auction/${auction.id}`}
+                    className="mt-6 w-full bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors duration-200 inline-block text-center"
+                  >
                     View Auction
-                  </button>
+                  </Link>
                 </div>
               </motion.div>
             ))}
