@@ -42,11 +42,11 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
-      <nav className="fixed w-full z-50 bg-white/80 backdrop-blur-lg border-b border-gray-100">
+      <nav className="fixed w-full z-50 bg-white/80 backdrop-blur-lg border-b border-blue-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex-shrink-0">
-              <h1 className="text-2xl font-bold text-gray-900">Bid Pax</h1>
+              <h1 className="text-2xl font-bold text-blue-900">Bid Pax</h1>
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-8">
@@ -54,7 +54,7 @@ const Index = () => {
                   <a
                     key={item}
                     href="#"
-                    className="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+                    className="text-blue-700 hover:text-blue-900 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
                   >
                     {item}
                   </a>
@@ -62,7 +62,7 @@ const Index = () => {
               </div>
             </div>
             <div className="flex items-center space-x-4">
-              <button className="bg-gray-900 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-800 transition-colors duration-200">
+              <button className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors duration-200">
                 Sign In
               </button>
             </div>
@@ -103,7 +103,7 @@ const Index = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="bg-white text-gray-900 px-8 py-4 rounded-md text-lg font-medium hover:bg-gray-100 transition-colors duration-200"
+            className="bg-blue-600 text-white px-8 py-4 rounded-md text-lg font-medium hover:bg-blue-700 transition-colors duration-200"
           >
             View Active Auctions
           </motion.button>
@@ -111,9 +111,9 @@ const Index = () => {
       </div>
 
       {/* Featured Auctions */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-24 bg-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h3 className="text-3xl font-bold text-gray-900 mb-12 text-center">Featured Auctions</h3>
+          <h3 className="text-3xl font-bold text-blue-900 mb-12 text-center">Featured Auctions</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {auctions.map((auction) => (
               <motion.div
@@ -131,9 +131,9 @@ const Index = () => {
                   />
                 </div>
                 <div className="p-6">
-                  <h4 className="text-xl font-semibold text-gray-900 mb-4">{auction.title}</h4>
+                  <h4 className="text-xl font-semibold text-blue-900 mb-4">{auction.title}</h4>
                   <div className="space-y-2">
-                    <div className="flex items-center text-gray-600">
+                    <div className="flex items-center text-blue-600">
                       <Clock className="w-5 h-5 mr-2" />
                       <span>
                         {new Date(auction.time).toLocaleDateString('en-US', {
@@ -144,16 +144,16 @@ const Index = () => {
                         })}
                       </span>
                     </div>
-                    <div className="flex items-center text-gray-600">
+                    <div className="flex items-center text-blue-600">
                       <MapPin className="w-5 h-5 mr-2" />
                       <span>{auction.location}</span>
                     </div>
-                    <div className="flex items-center text-gray-600">
+                    <div className="flex items-center text-blue-600">
                       <Package className="w-5 h-5 mr-2" />
                       <span>{auction.lots} Lots</span>
                     </div>
                   </div>
-                  <button className="mt-6 w-full bg-gray-900 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-800 transition-colors duration-200">
+                  <button className="mt-6 w-full bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors duration-200">
                     View Auction
                   </button>
                 </div>
